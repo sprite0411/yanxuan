@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no viewport-fit=cover">
+    <title>YanX</title>
+    <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552107998065&di=7f8b40fc8d1c5c22016d5899e42701d9&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F39%2F05%2F5b930519e8e5c_610.jpg"/>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1075374_wk5e6yaswy.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script type="text/javascript">
+
+    //rem适配
+    !(function () {
+      var width = document.documentElement.clientWidth;
+      var styleNode = document.createElement('style');
+      styleNode.innerHTML = 'html{font-size: ' + width / 10 + 'px !important;}';
+      document.head.appendChild(styleNode);
+    })();
+
+    //点透处理
+    !(function () {
+      var aNodes = document.querySelectorAll('a');
+      for (var i = 0; i < aNodes.length; i++) {
+        aNodes[i].addEventListener('touchstart', function () {
+          window.location = this.href;
+        });
+      }
+      ;
+    })();
+
+    //取消浏览器默认行为
+    document.addEventListener('touchstart',function(event){
+      event.preventDefault();
+    })
+
+  </script>
+</html>
